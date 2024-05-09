@@ -7,9 +7,13 @@ SPI bus timing
 This SPI clock frequency should be the host clock frequency divided by CLK_DIVIDE. This value is guaranteed to be even and >= 4. SCLK should have a 50% duty cycle. The slave will expect to clock
 in data on the rising edge of SCLK; therefore this module should output new MOSI values on SCLK falling edges. Similarly, you should latch MISO input bits on the rising edges of SCLK.
 Example timing diagram for n_clks = 4:
+
 SCLK        ________/-\_/-\_/-\_/-\______ 
+
 MOSI        ======= 3 | 2 | 1 | 0 =======
+
 MISO        ======= 3 | 2 | 1 | 0 =======
+
 SS_N        ------\_______________/------
 
 
